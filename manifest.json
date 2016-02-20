@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Alt Text Generator",
+  "description": "This extension add image alt tags for to make the web more accessible for people with vision impairment",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["jquery-1.12.0.min.js", "alt_text.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}
