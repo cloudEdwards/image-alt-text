@@ -1,0 +1,15 @@
+{
+  "name": "image-alt-text",
+  "version": "1.0.0",
+  "description": "generates image alt text for the visually impaired using the Google Vision API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Cloud Edwards",
+  "license": "ISC",
+  "dependencies": {
+    "html": "0.0.10"
+  }
+}
