@@ -7,8 +7,6 @@ app.use( bodyParser.json() );
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
-app.use(express.json());       // to support JSON-encoded bodies
-app.use(express.urlencoded());
 
 app.get('/', function (req, res) {
   var html_view = '<html><head><title>Image Alt Text Generator</title></head>' +
