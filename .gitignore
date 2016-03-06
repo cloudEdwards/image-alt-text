@@ -1,2 +1,4 @@
 
 server_side/node_modules/
+config.json
+python_server/
