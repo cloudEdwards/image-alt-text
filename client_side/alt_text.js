@@ -15,22 +15,34 @@ jQuery( document ).ready(function($) {
         i ++;
     } 
 
-    $.post("http://localhost:4000/getVision", image_objs ).done(function(result){
-        console.log( "ajax success!" );
-        parsed_result = $.parseJSON( result );
-        console.log( parsed_result );
+    // $.post("http://localhost:4000/getVision", image_objs ).done(function(result){
+    //     console.log( "ajax success!" );
+    //     parsed_result = $.parseJSON( result );
+    //     console.log( parsed_result );
 
-        $.each( parsed_result, function(index, value) {
-            console.log( "image alt!" );
-            page_images = $('img');
-            for (var i = page_images.length - 1; i >= 0; i--) {
-                if ( page_images[i].src == value.src ) {
-                    page_images[i].alt += value.alt;
-                }
-            };
-        });
+    //     $.each( parsed_result, function(index, value) {
+    //         console.log( "image alt!" );
+    //         page_images = $('img');
+    //         for (var i = page_images.length - 1; i >= 0; i--) {
+    //             if ( page_images[i].src == value.src ) {
+    //                 page_images[i].alt += value.alt;
+    //             }
+    //         };
+    //     });
+    // });
+
+    $(document).keypress(function(event){
+        
+        var key = String.fromCharCode(event.which);
+        console.log(key); 
+        if ( key == " ") {
+            console.log('space');
+            // event.preventDefault();
+        };
+        console.log($(":focus"));
+        if ( $(":focus").tagName == "img" ) {
+            console.log('focused element is image');
+        };
     });
-
-
     
 });
